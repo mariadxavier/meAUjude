@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    font-family: "Noto Serif", Poppins, "sans-serif";
+    margin: 0;
+    padding: 0;
+}
+
+.header-cadastro {
+    padding: 0;
+}
+
+:root {
+    --color-primary: #E42323;
+    --color-secundary: #F6D9BB;
+    --color-tertiary: #F4F4F4;
+    --color-black: #000;
+    ---color-white: #fff;
+}

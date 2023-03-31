@@ -1,0 +1,105 @@
+.banner {
+    margin:0%;
+    max-width: 100%;
+}
+
+header {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+section, .cadastro {
+    border-radius: 2%;
+    border-color: var(--color-black);
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    padding: 1.25rem;
+}
+
+legend {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.cadastro {
+    margin: 15px;
+}
+
+#cadastro-1, #cadastro-2, #cadastro-3, div{
+    display: none;
+}
+
+body {
+    background-color: var(--color-secundary);
+}
+
+.formularios {
+    background-color: #fff4e3;
+    width: 50%;
+    top: -10px;
+    display: flex;
+    flex-direction: column;
+    left: 25%;
+    min-height: 100vh;
+    font-family: "Noto Serif";
+    position: relative;
+    margin: 20px;
+    padding-bottom: 50px;
+    border: 20px 20px 20px 20px;
+}
+
+label {
+    color: var(--color-primary);
+}
+
+input {
+    border-radius: 8%;
+    background-color: #fff;
+}
+
+legend {
+    font-style: bold;
+    color: var(--color-primary);
+}
+
+.titulo {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    line-height: 70px;
+    color: #fff;
+    background-color: var(--color-primary);
+}
+
+nav,footer, main {    
+    border-color: black;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    padding: 1.25rem;
+} 
+
+nav a {
+    color: var(--color-black);
+    font-size: 1.25rem;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #a8a29e;
+    transition: all 0.4s;
+}
+
+footer div {
+    display: block;
+}
+
+@media screen and (min-width: 250px) {
+    .formularios {
+        width: 70%;
+        left: 14%;
+
+    }
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | MeAUjude</title>
+    <!-- Icon -->
+    <link rel="icon" href="./src/img/icon-paginas.png">
+    <!-- Link reset: -->
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <!-- Stylesheet: -->
+    <link rel="stylesheet" href="./src/css/cadastro.css">
+    <link rel="stylesheet" href="./src/css/footer.css">
+    <!-- Fontes google: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Poppins:wght@300;400;500&family=Quicksand&display=swap"
+        rel="stylesheet">
+    <!--link icons footer:  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<!-- script mostrar/ocultar formulários: -->
+<script>
+    function mostrar(id) {
+        let campos = document.getElementsByTagName("div");
+        for (let k = 0; k < campos.length; k++) {
+            campos[k].style.display = "";
+        }
+        document.getElementById("cadastro-" + id).style.display = "contents";
+    }
+</script>
+</head>
+
+
+<body>
+    <img src="./src/img/banner-paginas.png" alt="logo MeAUjude" class="banner">
+    <nav>
+        <a href="./index.html">Página inicial</a>
+        <a href="./adocoes.html">Adoções</a>
+        <a href="./doacoes.html">Doações</a>
+        <a href="./parceiros.html">Parceiros</a>
+        <a href="./sobre.html">Sobre Nós</a>
+        <a href="#footer_contacts">Contato</a>
+    </nav>
+    <header>
+        <img src="./src/img/icon-cadastro.png" alt="icon cadastro" style="width: 130px; border-radius: 100%;">
+    </header>
+    <h1 class="titulo">Cadastro</h1>
+    <main>
+        <section class="formularios">
+            <label for="select-tipo-cadastro">Selecione o tipo de cadastro:</label> <br>
+            <select id="select-tipo-cadastro" onchange="mostrar(this.value)">
+                <option value="">Selecione</option>
+                <option value="1"> Usuário </option>
+                <option value="2"> Instituição</option>
+                <option value="3"> Cadastrar animal resgatado </option>
+            </select>
+            <div id="cadastro-1" class="cadastro">
+                <form method="post" action="" name="cadastro-usuario">
+
+                    <legend>Cadastro de usuário</legend>
+                    <br>
+                    <label for="nome"> Nome: </label>
+                    <input type="text" name="nome" placeholder="Digite seu nome aqui"> <br>
+                    <br>
+
+                    <label for="e-mail">E-mail: </label>
+                    <input type="e-mail" name="email" placeholder="Digite seu e-mail"> <br>
+                    <br>
+
+                    <label for="dt-nascimento"> Data de nascimento: </label>
+                    <input type="date" name="dt-nascimento" min="1950-12-31" max="2022-12-31"> <br>
+                    <br>
+
+                    <label for="cpf">CPF: </label>
+                    <input type="text" name="cpf" \ pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \
+                        title="Digite um CPF no formato: xxx.xxx.xxx-xx"> <br>
+                    <br>
+
+                    <label for="endereco">Endereço: </label>
+                    <input type="text" name="endereco" placeholder="UF e cidade"> <br>
+                    <br>
+
+                    <input type="submit" name="enviar" value="Enviar" class="botao-enviar">
+                </form>
+            </div>
+            <div id='cadastro-2' class="cadastro">
+                <form method="post" action="">
+
+                    <legend>Cadastro de instituição</legend>
+                    <br>
+                    <label for="opcao-instituicao">Selecione o tipo de Instituição: </label> <br>
+                    <input type="radio" name="opcao-instituicao" value="ong"> ONG
+                    <input type="radio" name="opcao-instituicao" value="ong"> Abrigo
+                    <input type="radio" name="opcao-instituicao" value="ong"> Clinica Veterinária
+                    <input type="radio" name="opcao-instituicao" value="ong"> Petshop
+                    <input type="radio" name="opcao-instituicao" value="ong"> Outro <br>
+                    <br>
+
+                    <label for="nome-fantasia"> Nome fantasia: </label>
+                    <input type="text" name="nome-fantasia"> <br>
+                    <br>
+
+                    <label for="razao-social"> Razão social: </label>
+                    <input type="text" name="razao-social"> <br>
+                    <br>
+
+                    <label for="e-mail">E-mail para contato: </label>
+                    <input type="e-mail" name="email" placeholder="Digite seu e-mail"> <br>
+                    <br>
+
+                    <label for="telefone">Telefone para contato: </label>
+                    <input type="tel" name="telefone" placeholder="(00)0000-0000"> <br>
+                    <br>
+
+                    <label for="cnpj">CNPJ: </label>
+                    <input type="text" name="cnpj" \ pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" \
+                        title="Digite um CNPJ no formato: xx.xxx.xxx/xxxx-xx" placeholder="xx.xxx.xxx/xxxx-xx">
+                    <br>
+                    <br>
+
+
+                    <label for="cpf-titular">CPF do titular: </label>
+                    <input type="text" name="cpf-titular" \ pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \
+                        title="Digite um CPF no formato: xxx.xxx.xxx-xx" placeholder="xxx.xxx.xxx-xx"> <br>
+                    <br>
+
+                    <label for="nome-titular">Nome do titular: </label>
+                    <input type="text" name="nome-titular"> <br>
+                    <br>
+
+                    <label for="endereco">Endereço: </label>
+                    <input type="text" name="endereco" placeholder="UF, cidade, bairro e logradouro"> <br>
+                    <br>
+
+                    <label for="site-instituicao">Se possuir rede ou site, insira aqui: </label>
+                    <input type="url" name="site-instituicao"> <br>
+                    <br>
+
+                    <label for="alternativa-parceiro">Deseja aparecer na página 'Nossos Parceiros'? </label> <br>
+                    <input type="radio" name="alternativa-parceiro" value="True"> Sim
+                    <input type="radio" name="alternativa-parceiro" value="False"> Não <br>
+                    <br>
+
+                    <input type="submit" name="enviar" value="Enviar" class="botao-enviar">
+
+                </form>
+            </div>
+            <div id='cadastro-3' class="cadastro">
+                <form action="" method="post">
+
+                    <legend>Cadastro de animal resgatado</legend>
+                    <br>
+                    <label for="cidade">Sua cidade: </label> <br>
+                    <input type="text" name="cidade" placeholder="UF e cidade"> <br>
+                    <br>
+
+                    <label for="tratado">Animal já tratado? </label> <br>
+                    <input type="radio" name="tratado" value="True"> Sim
+                    <input type="radio" name="tratado" value="Falsa"> Não <br>
+                    <br>
+
+                    <label for="ferido">Está ferido? </label> <br>
+                    <input type="radio" name="ferido" value="True"> Sim
+                    <input type="radio" name="ferido" value="False"> Não <br>
+                    <br>
+
+                    <label for="sexo">Selecione o sexo do animal: </label> <br>
+                    <input type="radio" name="sexo" value="macho"> Macho
+                    <input type="radio" name="sexo" value="femea"> Fêmea
+                    <input type="radio" name="sexo" value="nao-identificado"> Não identificado <br>
+                    <br>
+
+                    <label for="porte">Selecione o porte do animal: </label> <br>
+                    <input type="radio" name="porte" value="grande"> Grande
+                    <input type="radio" name="porte" value="medio"> Médio
+                    <input type="radio" name="porte" value="pequeno"> Pequeno <br>
+                    <br>
+                    <input type="submit" name="enviar" value="Enviar" class="botao-enviar">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>MeAUjude</h1>
+                <p>It's all about your dreams.</p>
+
+                <div id="footer_social_media">
+                    <a href="https://www.facebook.com/" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook" ;"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-square-instagram" ;"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="telefone">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Atendimento</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Horário</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Contato</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">E-mail</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Conheça</h3>
+                </li>
+                <li>
+                    <a href="./sobre.html" class="footer-link">Sobre nós</a>
+                </li>
+                <li>
+                    <a href="./parceiros.html" class="footer-link">Nossos parceiros</a>
+                </li>
+                <li>
+                    <a href="./cadastro.html" class="footer-link">Cadastre-se</a>
+                </li>
+            </ul>
+
+            <div id="footer_subscribe">
+                <h3>Notificações</h3>
+
+                <p>
+                    Digite seu e-mail para receber
+                    notificações da MeAUjude!
+                </p>
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope" ;></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer_copyright">
+            &#169
+            2023 all rights reserved
+        </div>
+    </footer>
+</body>
+
+</html>
